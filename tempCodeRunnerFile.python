@@ -1,0 +1,27 @@
+import requests
+from bs4 import BeautifulSoup
+
+# Define the URL of the web page you want to scrape
+url = 'https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-1FCAEoggI46AdIM1gEaGyIAQGYATG4ARfIAQzYAQHoAQH4AQKIAgGoAgO4AtrE8KgGwAIB0gIkNjc4Y2U0NWYtZjQ3Ny00ZjYwLTg2MDktNmZmMTI5ZDU1ZTk52AIF4AIB&dest_id=-2106102&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0'  # Replace with the URL of the webpage you want to scrape
+
+# Send an HTTP GET request to the URL
+response = requests.get(url)
+
+# Check if the request was successful (status code 200)
+if response.status_code == 200:
+    # Parse the HTML content of the page using BeautifulSoup
+    soup = BeautifulSoup(response.text, 'html.parser')
+
+    # Find and extract all the text from the HTML
+    all_text = soup.get_text()
+
+    # Print or process the text as needed
+    print(all_text)
+
+    # Save the text to a text file named "delhi.txt"
+    with open('delhi.txt', 'w', encoding='utf-8') as file:
+        file.write(all_text)
+
+    print("Text saved to 'delhi.txt'")
+else:
+    print('Failed to retrieve the web page. Status code:', response.status_code)

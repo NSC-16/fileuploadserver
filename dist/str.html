@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  
+  <title>CodePen - Log in and sign up form</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- Include custom CSS for styling -->
+  <style>
+    /* Add your custom CSS styles here */
+    .custom-button {
+        background-color: #2E8B57;
+        color: #fff;
+        padding: 10px 20px;
+        border: none; 
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .custom-button:hover {
+        background-color: #90EE90; /* Change color on hover */
+    }
+    .custom-button1 {
+      background-color: #007BFF;
+      color: #fff;
+      padding: 10px 20px;
+      border: none; 
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  }
+
+  .custom-button1:hover {
+      background-color: #0056b3; /* Change color on hover */
+  }
+</style>
+  
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container">
+      <!--Data or Content-->
+      <div class="box-1">
+          <div class="content-holder">
+              <h2>Hello!</h2>
+             
+              <button class="button-1" onclick="signup()">Sign up</button>
+            <button class="button-2" onclick="login()">Login</button>
+          </div>
+      </div>
+
+      
+      <!--Forms-->
+      <div class="box-2">
+          <div class="login-form-container">
+              <h1>Login Form</h1>
+              <!-- <form action="signin.php" method="post">  -->
+              <!-- <label for="username">Username:</label>
+              <input type="text" placeholder="username" class="input-field" >
+              <br><br>
+              <label for="password">Password:</label>
+              <input type="password" placeholder="password" class="input-field">
+              <br><br> --> 
+              <!-- <h2>Sign In</h2> -->
+              <form action="signin.php" method="post">
+                <label for="username">Username:</label>
+                <input type="text" name="username" required><br><br>
+        
+                <label for="password">Password:</label>
+                <input type="password" name="password" required><br><br>
+                <button class="btn btn-primary custom-button" type="submit">Login</button><br><br>
+                <a href="/Adcon/index.html" class="btn btn-primary custom-button1">Go to Home Page</a>
+                
+                <!-- <input type="submit" value="Sign Up"> -->
+            </form>
+                  <!-- <input type="text" name="username" required><br><br>
+          
+                  <label for="password">Password:</label>
+                  <input type="password" name="password" required><br><br> -->
+                  <!-- <button class="login-button" type="submit">Login</button> -->
+                  <!-- <input type="submit" value="Sign In">
+              </form> -->
+              <!-- <button class="login-button" type="submit">Login</button> -->
+              <!-- <input type="submit" value="Sign In"> -->
+            </form>
+          </div>
+
+
+<!--Create Container for Signup form-->
+      <div class="signup-form-container">
+        <br><br><br>
+        <h1>Sign up</h1>
+        <form action="signup.php" method="post">
+          <label for="username">Username:</label>
+          <input type="text" name="username" required><br><br>
+  
+          <label for="password">Password:</label>
+          <input type="password" name="password" required><br><br>
+          <button class="btn btn-primary custom-button" type="submit">Signup</button><br><br>
+          <a href="/Adcon/index.html" class="btn btn-primary custom-button1">Go to Home Page</a>
+         
+          <!-- <input type="submit" value="Sign In"> -->
+      </form>
+          <!-- <input type="submit" value="Sign Up"> -->
+      <!-- </form> -->
+        
+        <!-- </form> -->
+        <!-- <input type="submit" value="Sign Up"> -->
+      </div>
+
+
+
+      </div>
+<!-- partial -->
+  <script  src="./script.js"></script>
+  <script>
+    function navigateToNextPage() {
+        // Change the window location to the specified URL
+        window.location.href = "/Adcon/index.html";
+    }
+</script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ 
+
+</body>
+</html>
